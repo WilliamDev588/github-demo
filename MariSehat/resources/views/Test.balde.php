@@ -1,2 +1,2 @@
 TestGary Antje
-Momin bodo 
+Momin bodo dan cupu valo
