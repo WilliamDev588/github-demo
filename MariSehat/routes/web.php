@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[\App\Http\Controllers\UserController::class, 'home']);
+Route::post('/register',[\App\Http\Controllers\UserController::class, 'register']);
