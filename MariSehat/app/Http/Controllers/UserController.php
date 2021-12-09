@@ -11,6 +11,7 @@ class UserController extends Controller
     public function registerData(Request $req){
         $user = new User;
         $user->username = $req->input('username');
+        $user->role = 'customer';
         $user->email = $req->input('email');
         $user->password = Crypt::encrypt($req->input('password'));
         $user->save();
