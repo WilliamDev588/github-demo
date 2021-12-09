@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Crypt;
 
 class UserController extends Controller
 {
-    public function register(Request $req){
+    public function registerData(Request $req){
         $user = new User;
         $user->username = $req->input('username');
         $user->email = $req->input('email');
@@ -17,6 +17,9 @@ class UserController extends Controller
         $req->session()->put('user', $req->input('username'));
 
         return redirect()->back();
+    }
+    public function register(){
+        return view('register');
     }
     public function login(Request $req){
         $user = User::where('email', $req->input('email'))->get();

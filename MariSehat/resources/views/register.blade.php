@@ -48,7 +48,7 @@
     <div class="container">
         <h2 class="row justify-content-center m-3" style="color: #a748aa">Login</h2>
         <h4>Register</h4>
-        <form action="/register" method="post" enctype="multipart/form-data">
+        <form action="/registSubmit" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <table >
                 <tr>
