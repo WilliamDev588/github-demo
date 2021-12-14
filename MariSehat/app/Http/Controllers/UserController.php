@@ -22,14 +22,21 @@ class UserController extends Controller
     public function register(){
         return view('register');
     }
-    public function login(Request $req){
-        $user = User::where('email', $req->input('email'))->get();
+
+
+
+    public function loginData(Request $req){
+        $user = User::where('username', $req->input('username'))->get();
         if(Crypt::decrypt($user[0]->password)==$req->input('password')){
             $req->session()->put('user', $user[0]->name);
             return view('home');
         }
     }
 
+    public function login(){
+        return view('login');
+    }
+   
     public function home(){
         return view('home');
     }

@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
         <title>Mari Sehat</title>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,7 +18,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body class="antialiased">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- Brand -->
             <a class="navbar-brand" href="#">
                 <img src="header\Health Plus Logo.png" alt="Logo" style="width:40px;">
@@ -54,7 +57,17 @@
                     <a class="nav-link" href="#">My Cart</a>
                 </li>
             </ul>
+            <!-- Login Regist -->
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+              </li>
+            </ul>
           </nav>
+<!-- Akhir Navbar -->
           {{-- <br><br><br><br><br>
           <a href="">adasdsads</a>
           <br><br><br><br><br> --}}

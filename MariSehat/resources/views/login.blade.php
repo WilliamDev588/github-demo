@@ -13,7 +13,7 @@
         {{-- <link rel="stylesheet" type="text/css" href="{{ url('script/style.css') }}"> --}}
         <link href="./script/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body >
             <!-- Navbar -->
@@ -67,11 +67,10 @@
           </nav>
 <!-- Akhir Navbar -->
 <!-- @yield('content') -->
-
-<div class="col-md-5 col-md-offset-3 mx-auto">
-<form action="/registSubmit" method="post" enctype="multipart/form-data">
+<div class="container">
+<form action="/loginSubmit" method="post" enctype="multipart/form-data">
 {{csrf_field()}}
-<h2 class="text-center">Register</h2>
+<h2 class="text-center">Login</h2>
 <div class="form-group row">
     <label for="InputUsername" class="col-sm-2 col-form-label">Username</label>
     <div class="col-sm-10">
@@ -79,26 +78,18 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email">
+      <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control"  name="password"  id="inputPassword3" placeholder="Password">
+      <button type="submit" class="btn btn-primary">Login</button>
     </div>
   </div>
-      <button type="submit" class="btn btn-block btn-primary">Register</button>
-      <br>
-              <a href="{{ route('auth.register') }}">I don't have an account, create new</a>
-         
-  </div>
-  <br>
 </form>
 </div>
-
 <!-- @yield('content') -->
 
      <!-- Copyright -->
