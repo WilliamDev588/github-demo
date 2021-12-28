@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('image');
         });
 
-        Schema::table('books', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id');
 
             $table->foreign('category_id')->references('id')->on('categories');
