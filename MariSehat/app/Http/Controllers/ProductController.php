@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Furniture;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    public function addFurniture(Request  $request){
+    public function addProducts(Request  $request){
         $rules = [
             'name' => 'required|max:15|unique:furniture,name',
+            'category' => 'required',
             'price' => 'required|numeric|between:5000,10000000',
-            'type' => 'required',
-            'color' => 'required',
+            'description' => 'required',
             'image' => 'required|mimes:jpeg, png, jpg'
         ];
 
@@ -23,20 +24,20 @@ class ProductController extends Controller
             return back()->withErrors($validator);
         }
 
-        $furniture = new Furniture();
-        $furniture->name = $request->name;
-        $furniture->price = $request->price;
-        $furniture->type = $request->type;
-        $furniture->color = $request->color;
+        $product = new Product();
+        $product->name = $request->name;
+        $product->category = $request->category;
+        $product->price = $request->price;
+        $product->description = $request->description;
 
         $file = $request->file('image');
         $imageName = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/image/furnitures', $file, $imageName);
+        Storage::putFileAs('public/image/products', $file, $imageName);
 
-        $furniture->image = 'image/furnitures/'.$imageName;
+        $product->image = 'image/products/'.$imageName;
 
 
-        $furniture->save();
+        $product->save();
         return redirect('/login');
     }
 }

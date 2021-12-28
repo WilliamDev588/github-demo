@@ -9,4 +9,8 @@ class Product extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    public function category(){
+        return $this->hasOne(Category::class, 'id', 'category_id');
+    }
 }

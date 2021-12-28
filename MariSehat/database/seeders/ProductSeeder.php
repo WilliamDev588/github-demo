@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             'name' => 'chair',
-            'category' => 'Equipment',
+            'category_id' => '1',
             'price' => '500000',
             'description' => 'untuk duduklah',
             'image' => 'public/image/products/chair.png'
