@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[\App\Http\Controllers\UserController::class, 'home']);
+Route::get('/home',[\App\Http\Controllers\UserController::class, 'home']);
 Route::post('/registSubmit',[\App\Http\Controllers\UserController::class, 'registerData']);
 Route::get('/register',[\App\Http\Controllers\UserController::class, 'register'])->middleware('guest');
 

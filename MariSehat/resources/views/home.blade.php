@@ -65,9 +65,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Register</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
             </ul>
           </nav>
   Welcome, {{auth()->user()->username}}
+  
 <!-- Akhir Navbar -->
           {{-- <br><br><br><br><br>
           <a href="">adasdsads</a>
