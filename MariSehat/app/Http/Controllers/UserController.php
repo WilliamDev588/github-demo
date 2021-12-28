@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function registerData(Request $request){
         $rules = [
-            'username' => 'required|regex:/^[\pL\s\-]+$/u',
+            'username' => 'required|regex:/^[\pL\s\-]+$/u|unique:user,username',
             'email' => 'required|unique:users,email',
             'password' => 'required|min:5'
         ];
@@ -37,21 +37,21 @@ class UserController extends Controller
     }
 
     public function loginData(Request $request){
-        $email = $request->email;
+        $username = $request->username;
         $password = $request->password;
         $rememberMe = $request->rememberMe;
 
-        $isvalid = auth()->attempt(['email' => $email,
+        $isvalid = auth()->attempt(['username' => $username,
             'password' => $password]);
 
         if($isvalid){
             if($rememberMe){
-                Cookie::queue('email', $email, 60);
+                Cookie::queue('username', $username, 60);
                 Cookie::queue('password', $password, 60);
             }
             return redirect('home');
         }else{
-            return back()->withErrors(new MessageBag(['Invalid email or password']));
+            return back()->withErrors(new MessageBag(['Invalid username or password']));
         }
     }
 

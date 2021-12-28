@@ -22,7 +22,7 @@
             <a class="navbar-brand" href="#">
                 <img src="header\Health Plus Logo.png" alt="Logo" style="width:40px;">
             </a>
-          
+
             <!-- Links -->
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -92,8 +92,15 @@
   </div>
       <button type="submit" class="btn btn-block btn-primary">Register</button>
       <br>
-              <a href="{{ route('auth.register') }}">I don't have an account, create new</a>
-         
+    <div class="errorMes d-flex flex-column justify-content-center">
+        @if($errors->any())
+            @if($errors->any())
+                <i class="text-danger text-center mt-1">{{$errors->first()}}</i>
+            @endif
+        @endif
+    </div>
+{{--              <a href="{{ route('auth.register') }}">I don't have an account, create new</a>--}}
+
   </div>
   <br>
 </form>

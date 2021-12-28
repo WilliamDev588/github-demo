@@ -22,7 +22,7 @@
             <a class="navbar-brand" href="#">
                 <img src="header\Health Plus Logo.png" alt="Logo" style="width:40px;">
             </a>
-          
+
             <!-- Links -->
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -88,6 +88,11 @@
       <button type="submit" class="btn btn-primary">Login</button>
     </div>
   </div>
+    <div class="errorMes d-flex justify-content-center">
+        @if($errors->any())
+            <i class="text-danger text-center mt-3">{{$errors->first()}}</i>
+        @endif
+    </div>
 </form>
 </div>
 <!-- @yield('content') -->

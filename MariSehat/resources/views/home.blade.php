@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
         <title>Mari Sehat</title>
@@ -24,7 +24,7 @@
             <a class="navbar-brand" href="#">
                 <img src="header\Health Plus Logo.png" alt="Logo" style="width:40px;">
             </a>
-          
+
             <!-- Links -->
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -67,6 +67,7 @@
               </li>
             </ul>
           </nav>
+  Welcome, {{auth()->user()->username}}
 <!-- Akhir Navbar -->
           {{-- <br><br><br><br><br>
           <a href="">adasdsads</a>
@@ -83,7 +84,7 @@
             <h2 id="text"><span>It's time for a new</span><br>Dinner</h2>
             <a href="#" id="button">Find</a>
           </section> --}}
-          
+
           <div id='white_Box'>
             <h3 style="text-align:center;">MariSehat</h3>
             <p>
@@ -92,10 +93,10 @@
               Do you think you're living an ordinary life? You are so mistaken it's difficult to even explain. The mere fact that you exist makes you extraordinary. The odds of you existing are less than winning the lottery, but here you are. Are you going to let this extraordinary opportunity pass?
               He was aware there were numerous wonders of this world including the unexplained creations of humankind that showed the wonder of our ingenuity. There are huge heads on Easter Island. There are the Egyptian pyramids. There’s Stonehenge. But he now stood in front of a newly discovered monument that simply didn't make any sense and he wondered how he was ever going to be able to explain it.
               She nervously peered over the edge. She understood in her mind that the view was supposed to be beautiful, but all she felt was fear. There had always been something about heights that disturbed her, and now she could feel the full force of this unease. She reluctantly crept a little closer with the encouragement of her friends as the fear continued to build. She couldn't help but feel that something horrible was about to happen.
-              
+
             </p>
           </div>
-          
+
           <div class="bgimg-2">
             <div class="caption">
               <div class="caption">
@@ -103,18 +104,18 @@
               </div>
             </div>
           </div>
-          
+
           <div id='black_Box'>
             <p>This is a place holder
               <br>Detail for Calculator</p>
           </div>
-          
+
           <div class="bgimg-3">
             <div class="caption">
               <span class="border">Regiment Calculator</span>
             </div>
           </div>
-          
+
           <div id='black_Box'>
             <p>This is a place holder
               <br>Detail for Calculator</p>
@@ -125,12 +126,12 @@
               <span class="border">Marketplace</span>
             </div>
           </div>
-          
+
           <div id='black_Box'>
             <p>This is a place holder
               <br>Detail for Market</p>
           </div>
-          
+
           <div class="bgimg-1">
             <div class="caption">
             {{-- <span class="border">COOL!</span> --}}
@@ -152,7 +153,7 @@
                       </p>
                     </div>
                     <!--Grid column-->
-                    
+
                     <!--Grid column-->
                     <div class="col-md-5 col-12">
                       <!-- Email input -->
@@ -162,7 +163,7 @@
                       </div>
                     </div>
                     <!--Grid column-->
-          
+
                     <!--Grid column-->
                     <div class="col-auto">
                       <!-- Submit button -->
@@ -178,7 +179,7 @@
               <!-- Section: Form -->
             </div>
             <!-- Grid container -->
-          
+
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
               © 2021 Copyright:
