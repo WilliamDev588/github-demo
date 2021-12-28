@@ -20,3 +20,4 @@ Route::get('/register',[\App\Http\Controllers\UserController::class, 'register']
 
 Route::get('/login',[\App\Http\Controllers\UserController::class, 'login'])->middleware('guest');
 Route::post('/loginSubmit',[\App\Http\Controllers\UserController::class, 'loginData']);
+Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);

@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function registerData(Request $request){
         $rules = [
-            'username' => 'required|regex:/^[\pL\s\-]+$/u|unique:user,username',
+            'username' => 'required|regex:/^[\pL\s\-]+$/u|unique:users,username',
             'email' => 'required|unique:users,email',
             'password' => 'required|min:5'
         ];
@@ -30,7 +30,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->back();
+        return redirect('/login');
     }
     public function register(){
         return view('register');
