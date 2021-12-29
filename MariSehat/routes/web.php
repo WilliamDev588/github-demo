@@ -18,6 +18,8 @@ use App\Http\Controllers\FoodController;
 Route::get('/home',[\App\Http\Controllers\UserController::class, 'home']);
 Route::post('/registSubmit',[\App\Http\Controllers\UserController::class, 'registerData']);
 Route::get('/register',[\App\Http\Controllers\UserController::class, 'register'])->middleware('guest');
+Route::view('/cart1', 'cart');
+
 
 Route::get('/login',[\App\Http\Controllers\UserController::class, 'login'])->middleware('guest');
 Route::post('/loginSubmit',[\App\Http\Controllers\UserController::class, 'loginData']);
