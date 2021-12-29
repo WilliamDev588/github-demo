@@ -34,7 +34,7 @@ class FoodController extends Controller
         $nameGen = hexdec(uniqid());
         $imgExt = strtolower($foodImage->getClientOriginalExtension());
         $imgName = $nameGen.'.'.$imgExt;
-        $upLocation = 'image/food/';
+        $upLocation = 'header/';
         $lastImg = $upLocation.$imgName;
         $foodImage->move( $upLocation,$imgName);
 
