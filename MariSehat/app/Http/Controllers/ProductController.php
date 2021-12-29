@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Furniture;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -10,9 +11,15 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
+    public function addProductPage(){
+        $product = Product::all();
+        $category = Category::all();
+        return view('/addProduct')->with('product', $product)->with('category', $category);
+
+    }
     public function addProducts(Request  $request){
         $rules = [
-            'name' => 'required|max:15|unique:furniture,name',
+            'name' => 'required|max:15|unique:products,name',
             'category' => 'required',
             'price' => 'required|numeric|between:5000,10000000',
             'description' => 'required',
@@ -26,7 +33,7 @@ class ProductController extends Controller
 
         $product = new Product();
         $product->name = $request->name;
-        $product->category = $request->category;
+        $product->category_id = $request->category;
         $product->price = $request->price;
         $product->description = $request->description;
 
@@ -34,10 +41,11 @@ class ProductController extends Controller
         $imageName = time().'.'.$file->getClientOriginalExtension();
         Storage::putFileAs('public/image/products', $file, $imageName);
 
+
         $product->image = 'image/products/'.$imageName;
-
-
+//        dd($product);
         $product->save();
-        return redirect('/login');
+
+        return redirect('/addProduct');
     }
 }
