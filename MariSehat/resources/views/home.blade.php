@@ -48,7 +48,7 @@
                   Market
                 </a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Food</a>
+                  <a class="dropdown-item" href="{{ route('all.food') }}">Food</a>
                   <a class="dropdown-item" href="#">Equipment</a>
                   <a class="dropdown-item" href="#">Vitamin</a>
                 </div>
@@ -70,7 +70,7 @@
               </li>
             </ul>
           </nav>
-  Welcome, {{auth()->user()->username}}
+          Welcome, {{auth()->user()->username}}
   
 <!-- Akhir Navbar -->
           {{-- <br><br><br><br><br>

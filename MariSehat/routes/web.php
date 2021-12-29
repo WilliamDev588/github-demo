@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/register',[\App\Http\Controllers\UserController::class, 'register']
 Route::get('/login',[\App\Http\Controllers\UserController::class, 'login'])->middleware('guest');
 Route::post('/loginSubmit',[\App\Http\Controllers\UserController::class, 'loginData']);
 Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
+
+Route::get('/food/all', [FoodController::class, 'AllFood'])->name('all.food');
+Route::post('/food/add', [FoodController::class, 'AddFood'])->name('store.food');
