@@ -44,7 +44,7 @@
                                 <td>{{$product->category->category}}</td>
                                 <td>{{$product->price}}</td>
                                 <td>{{$product->description}}</td>
-                                <td><img src="{{asset($product->image)}}" style="height:70px; width:100px"></td>
+                                <td><img src="{{Storage::url($product->image)}}" style="height:70px; width:100px"></td>
 
                             </tr>
                         @endforeach
