@@ -32,6 +32,7 @@
                     <th scope="col">Food Calorie</th>
                     <th scope="col">Food Description</th>
                     <th scope="col">Food Image</th>
+                    <th scope="col">Action</th>
 
                     </tr>
                 </thead>
@@ -44,7 +45,10 @@
                     <td>{{$food->foodCalorie}}</td>
                     <td>{{$food->foodInformation}}</td>
                     <td><img src="{{asset($food->foodImage)}}" style="height:70px; width:100px"></td>
-           
+                    <td>
+                        <a href="{{url('food/edit/'.$food->id)}}" class="btn btn-info">Edit</a>
+                        <a href="{{url('food/delete/'.$food->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                    </td>
                     </tr>
                     @endforeach
                 </tbody>

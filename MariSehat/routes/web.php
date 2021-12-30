@@ -37,3 +37,6 @@ Route::get('/food/all', [FoodController::class, 'AllFood'])->name('all.food');
 Route::post('/food/add', [FoodController::class, 'AddFood'])->name('store.food');
 
 Route::get('/admin',[\App\Http\Controllers\UserController::class, 'admin']);
+Route::get('/food/edit/{id}', [FoodController::class, 'Edit']);
+Route::post('/food/update/{id}', [FoodController::class, 'Update']);
+Route::get('/food/delete/{id}', [FoodController::class, 'Delete']);
