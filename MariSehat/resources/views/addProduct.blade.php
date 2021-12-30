@@ -32,7 +32,8 @@
                             <th scope="col">Product Category</th>
                             <th scope="col">Product Price</th>
                             <th scope="col">Product Description</th>
-
+                            <th scope="col">Product Image</th>
+                            <th scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,7 +46,10 @@
                                 <td>{{$product->price}}</td>
                                 <td>{{$product->description}}</td>
                                 <td><img src="{{Storage::url($product->image)}}" style="height:70px; width:100px"></td>
-
+                                <td>
+                                    <a href="/updateProduct/{{$product->id}}" class="btn btn-primary">Update</a>
+                                    <a href="/deleteProduct/{{$product->id}}" class="btn btn-danger" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -78,7 +82,6 @@
                             @error('foodCalorie')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
-
                         </div>
                         <div class="form-group">
 

@@ -28,6 +28,9 @@ Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
 
 Route::post('/addProduct',[\App\Http\Controllers\ProductController::class, 'addProducts']);
 Route::get('/addProduct',[\App\Http\Controllers\ProductController::class, 'addProductPage']);
+Route::get('/updateProduct/{id}',[\App\Http\Controllers\ProductController::class, 'updateProductPage']);
+Route::post('/updateProduct/{id}',[\App\Http\Controllers\ProductController::class, 'updateProduct']);
+Route::get('/deleteProduct/{id}',[\App\Http\Controllers\ProductController::class, 'deleteProduct']);
 Route::get('/product',[\App\Http\Controllers\UserController::class, 'product']);
 Route::get('/productDetail',[\App\Http\Controllers\UserController::class, 'productDetail']);
 Route::get('/about',[\App\Http\Controllers\UserController::class, 'about']);

@@ -23,7 +23,7 @@ class ProductController extends Controller
             'category' => 'required',
             'price' => 'required|numeric|between:5000,10000000',
             'description' => 'required',
-            'image' => 'required|mimes:jpeg, png, jpg'
+            'image' => 'required|mimes:jpeg,png,jpg'
         ];
 
         $validator = Validator::make($request->all(), $rules);
@@ -47,5 +47,64 @@ class ProductController extends Controller
         $product->save();
 
         return redirect('/addProduct');
+    }
+
+    public function updateProductPage($id){
+        $product = Product::find($id);
+        $category = Category::all();
+        return view('/updateProduct')->with('product', $product)->with('category', $category);
+    }
+
+    public function updateProduct(Request $request, $id){
+        $rules = [
+            'name' => 'required|max:15|unique:products,name',
+            'category' => 'required',
+            'price' => 'required|numeric|between:5000,10000000',
+            'description' => 'required',
+            'image' => 'mimes:jpeg, png, jpg'
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
+
+        $product = Product::find($id);
+        if($product != null) {
+            $product->name = $request->name;
+            $product->category_id = $request->category;
+            $product->price = $request->price;
+            $product->description = $request->description;
+
+            if($request->file('image')){
+                $file = $request->file('image');
+                $imageName = time() . '.' . $file->getClientOriginalExtension();
+                Storage::putFileAs('public/image/products', $file, $imageName);
+
+                Storage::delete('public/' . $product->image);
+
+                $product->image = 'image/products' . $imageName;
+            }
+            $product->save();
+        }
+
+        $product = Product::all();
+        $category = Category::all();
+
+        return view('/addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
+    }
+
+    public function deleteProduct($id){
+        $product = Product::find($id);
+        if($product != null) {
+            Storage::delete('pubilc/'.$product->image);
+
+            $product->delete();
+        }
+
+        $product = Product::all();
+        $category = Category::all();
+
+        return view('/addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
     }
 }
