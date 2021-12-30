@@ -35,6 +35,12 @@ Route::get('/product',[\App\Http\Controllers\UserController::class, 'product']);
 Route::get('/productDetail',[\App\Http\Controllers\UserController::class, 'productDetail']);
 Route::get('/about',[\App\Http\Controllers\UserController::class, 'about']);
 
+Route::get('/addCategory',[\App\Http\Controllers\CategoryController::class, 'addCategoryPage']);
+Route::post('/addCategory',[\App\Http\Controllers\CategoryController::class, 'addCategory']);
+Route::get('/updateCategory/{id}',[\App\Http\Controllers\CategoryController::class, 'updateCategoryPage']);
+Route::post('/updateCategory/{id}',[\App\Http\Controllers\CategoryController::class, 'updateCategory']);
+Route::get('/deleteCategory/{id}',[\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
+
 
 Route::get('/food/all', [FoodController::class, 'AllFood'])->name('all.food');
 Route::post('/food/add', [FoodController::class, 'AddFood'])->name('store.food');
