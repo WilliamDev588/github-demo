@@ -35,3 +35,5 @@ Route::get('/about',[\App\Http\Controllers\UserController::class, 'about']);
 
 Route::get('/food/all', [FoodController::class, 'AllFood'])->name('all.food');
 Route::post('/food/add', [FoodController::class, 'AddFood'])->name('store.food');
+
+Route::get('/admin',[\App\Http\Controllers\UserController::class, 'admin']);
