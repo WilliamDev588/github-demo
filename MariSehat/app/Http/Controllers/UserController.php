@@ -72,6 +72,10 @@ class UserController extends Controller
         return view('product');
     }
 
+    public function productDetail(){
+        return view('productDetail');
+    }
+
     public function about(){
         return view('about');
     }
