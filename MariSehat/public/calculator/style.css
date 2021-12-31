@@ -1,0 +1,38 @@
+body{
+    background:#bbbab6;
+}
+.calculate > a{
+    color: #dc3545;
+    font-weight: 500;
+}
+.calculate .panel-default{
+    padding-top: 10%;
+    padding-bottom: 60%;
+}
+.calculate .panel-body{
+    padding: 15%;
+    margin-bottom: -50%;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 650px;
+}
+img{
+    width:40%;
+    margin-bottom:10%;
+}
+.btnCalculate{
+    background: #c0392b;
+    border:none;
+}
+.calculate .dropdown{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.calculate .dropdown button{
+    width: 100%;
+}
+.calculate .dropdown ul{
+    width: 100%;
+}
