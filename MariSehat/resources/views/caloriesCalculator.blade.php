@@ -92,16 +92,25 @@
                                         <div class="input-group">
                                             <select class="form-control" id="sel1">
                                                 <option selected="true" disabled="disabled">Please select your Food</option>
-                                                <option>Apple</option>
+                                                @foreach($foods as $food)
+                                                <option>{{$food->foodName}}</option>
+                                                @endforeach
+
+                                                <!-- <>{{$food->foodCalorie}}</> -->
+                                                
+                                                <!-- <option>Apple</option>
                                                 <option>Egg</option>
-                                                <option>Breads</option>
+                                                <option>Breads</option> -->
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="calculte" name="calculate" placeholder="Gram, ex. 100" class="form-control" type="text">
+                                            <input id="calculte" name="calculate" type="text" placeholder="Gram, ex. 100" class="form-control" type="text" >
+                                            
+
+                                            </form>
                                         </div>
                                     </div>
                                     {{-- add another keep looping --}}

@@ -39,7 +39,7 @@
                 </a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Calories</a>
-                  <a class="dropdown-item" href="#">Exercise Regiment</a>
+                  <a class="dropdown-item" href="{{ route('all.workout') }}">Exercise Regiment</a>
                 </div>
             </li>
               <!-- Dropdown -->

@@ -12,6 +12,11 @@ class FoodController extends Controller
         return view('food', compact('foods'));
 
     }
+    public function AllFood2(){
+        $foods = Food::latest()->paginate(5);
+        return view('caloriesCalculator', compact('foods'));
+
+    }
     public function AddFood(Request $request){
         $validated = $request->validate([
             'foodName' => 'required|unique:food|max:255',
@@ -60,6 +65,7 @@ class FoodController extends Controller
 
         return Redirect()->back()->with('success','Food Inserted Succesfully');
     }
+    
 
     public function Edit($id){
         $foods = Food::find($id);

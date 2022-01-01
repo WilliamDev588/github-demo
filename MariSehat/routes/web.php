@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\WorkoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::post('/registSubmit',[\App\Http\Controllers\UserController::class, 'regis
 Route::get('/register',[\App\Http\Controllers\UserController::class, 'register'])->middleware('guest');
 Route::view('/cart1', 'cart');
 Route::view('/caloriesCalculator', 'caloriesCalculator');
+Route::get('/caloriesCalculator', [FoodController::class, 'AllFood2'])->name('all.food');
 
 
 Route::get('/login',[\App\Http\Controllers\UserController::class, 'login'])->middleware('guest');
@@ -50,3 +52,9 @@ Route::get('/admin',[\App\Http\Controllers\UserController::class, 'admin']);
 Route::get('/food/edit/{id}', [FoodController::class, 'Edit']);
 Route::post('/food/update/{id}', [FoodController::class, 'Update']);
 Route::get('/food/delete/{id}', [FoodController::class, 'Delete']);
+
+Route::get('/workout/all', [WorkoutController::class, 'AllWorkout'])->name('all.workout');
+Route::post('/workout/add', [WorkoutController::class, 'AddWorkout'])->name('store.workout');
+Route::get('/workout/edit/{id}', [WorkoutController::class, 'Edit']);
+Route::post('/workout/update/{id}', [WorkoutController::class, 'Update']);
+Route::get('/workout/delete/{id}', [WorkoutController::class, 'Delete']);
