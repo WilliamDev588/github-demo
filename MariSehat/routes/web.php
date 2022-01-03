@@ -31,7 +31,10 @@ Route::post('/loginSubmit', [\App\Http\Controllers\UserController::class, 'login
 Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
 
 // Cart
-Route::view('/mycart', 'user.cart');
+//Route::view('/mycart', 'user.cart');
+Route::get('/mycart', [\App\Http\Controllers\CartController::class, 'cartPage']);
+Route::get('/addToCart/{id}', [\App\Http\Controllers\CartController::class, 'addToCart']);
+Route::get('/removeCart/{id}', [\App\Http\Controllers\CartController::class, 'remove']);
 
 // Product
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'productPage']);

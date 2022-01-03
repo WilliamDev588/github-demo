@@ -35,7 +35,7 @@
                 <img class="card-img-top mt-3" src="{{Storage::url($product->image) }}" alt="">
                 <ul>
                 <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                <li><a href="/home"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/addToCart/{{$product->id}}"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
               </div>
               <div class="part-2">
