@@ -22,6 +22,13 @@ Route::get('/register',[\App\Http\Controllers\UserController::class, 'register']
 Route::view('/cart1', 'cart');
 Route::view('/caloriesCalculator', 'caloriesCalculator');
 Route::get('/caloriesCalculator', [FoodController::class, 'AllFood2'])->name('all.food');
+Route::get('/tes', [FoodController::class, 'AllFoodTes']);
+
+Route::post('/caloriesCalculator/calculate', [FoodController::class, 'CalculateCalorie'])->name('calculate.calorie');
+Route::get('/foodview','FoodController@AllFood');
+Route::get('/findFoodName','FoodController@findFoodName');
+Route::get('/findFoodCalorie','FoodController@findFoodCalorie');
+Route::get('/GetFoodCalorie', [FoodController::class, 'GetFoodCalorie']);
 
 
 Route::get('/login',[\App\Http\Controllers\UserController::class, 'login'])->middleware('guest');

@@ -5,16 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Food;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 class FoodController extends Controller
 {
     public function AllFood(){
         $foods = Food::latest()->paginate(5);
+
         return view('food', compact('foods'));
 
     }
     public function AllFood2(){
         $foods = Food::latest()->paginate(5);
+
         return view('caloriesCalculator', compact('foods'));
+
+    }
+    public function AllFoodTes(){
+        $foods = Food::latest()->paginate(5);
+
+        return view('tes', compact('foods'));
 
     }
     public function AddFood(Request $request){
@@ -126,4 +136,29 @@ class FoodController extends Controller
         Food::find($id)->delete();
         return Redirect()->back()->with('success','food deleted successfully');
     }
+
+    public function CalculateCalorie(Request $request){
+        $ID = $request->foodName;
+        echo $ID;
+    }
+
+    public function findFoodName(Request $request){
+        $data = Food::select('foodName','id')->where('id', $request->id)->take(100)->get();
+        return response()->json($data);
+    }
+    public function findFoodCalorie(Request $request){
+	
+		//it will get price if its id match with product id
+		$p=Food::select('foodCalorie')->where('id',$request->id)->first();
+		
+    	return response()->json($p);
+	}
+
+    public function GetFoodCalorie(Request $request){
+        // echo json_encode(DB::table('food')->where('id', $id)->value('foodCalorie'));
+        $p=Food::select('food')->where('id',$request->id)->first();
+
+        return response()->json($p);
+    }
+
 }
