@@ -33,8 +33,8 @@ Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
 // Cart
 Route::view('/mycart', 'user.cart');
 
-// Product 
-Route::get('/product', [\App\Http\Controllers\UserController::class, 'product']);
+// Product
+Route::get('/product', [\App\Http\Controllers\ProductController::class, 'productPage']);
 Route::get('/productDetail', [\App\Http\Controllers\UserController::class, 'productDetail']);
 
 
@@ -64,7 +64,7 @@ Route::get('/workout/edit/{id}', [WorkoutController::class, 'Edit']);
 Route::post('/workout/update/{id}', [WorkoutController::class, 'Update']);
 Route::get('/workout/delete/{id}', [WorkoutController::class, 'Delete']);
 
-// Admin Product 
+// Admin Product
 Route::post('/addProduct', [\App\Http\Controllers\ProductController::class, 'addProducts']);
 Route::get('/addProduct', [\App\Http\Controllers\ProductController::class, 'addProductPage']);
 Route::get('/updateProduct/{id}', [\App\Http\Controllers\ProductController::class, 'updateProductPage']);

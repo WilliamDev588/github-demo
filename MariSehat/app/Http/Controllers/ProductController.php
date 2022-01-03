@@ -107,4 +107,11 @@ class ProductController extends Controller
 
         return view('admin.addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
     }
+
+    public function productPage(){
+        $product = Product::all();
+        $category = Category::all();
+
+        return view('user.product')->with('category', $category)->with('product', $product);
+    }
 }

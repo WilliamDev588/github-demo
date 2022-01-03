@@ -10,10 +10,12 @@
   <div class="col-md-2">
     <ul class="list-group ml-2 border rounded-3 border-dark">
       <li class="list-group-item">Kategori Produk</li>
-      <li class="list-group-item">A</li>
-      <li class="list-group-item">B</li>
-      <li class="list-group-item">C</li>
-      <li class="list-group-item">D</li>
+        @foreach($category as $cat)
+            <li class="list-group-item">{{$cat->category}}</li>
+        @endforeach
+{{--      <li class="list-group-item">B</li>--}}
+{{--      <li class="list-group-item">C</li>--}}
+{{--      <li class="list-group-item">D</li>--}}
     </ul>
   </div>
   <!-- List -->
@@ -26,23 +28,23 @@
           </div>
         </div>
         <div class="row">
-          <!-- Single Product -->
+          @foreach($product as $product)
           <div class="card col-md-6 col-lg-4 col-xl-3 rounded-3 shadow p-3 mb-5 bg-body rounded">
             <div id="product-1" class="single-product">
               <div class="part-1">
-                <img class="card-img-top mt-3" src="produk/dumbell.jpg" alt="">
+                <img class="card-img-top mt-3" src="{{Storage::url($product->image) }}" alt="">
                 <ul>
                 <li><a href="#"><i class="fas fa-eye"></i></a></li>
                 <li><a href="/home"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
               </div>
               <div class="part-2">
-                <h3 class="product-title">Dumbell</h3>
-                <h4 class="product-price">Rp.100.000</h4>
+                <h3 class="product-title">{{$product->name}}</h3>
+                <h4 class="product-price">{{$product->price}}</h4>
               </div>
             </div>
           </div>
-
+            @endforeach
         </div>
       </div>
   </div>
