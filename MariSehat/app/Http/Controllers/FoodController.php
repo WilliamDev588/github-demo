@@ -11,14 +11,12 @@ class FoodController extends Controller
 {
     public function AllFood(){
         $foods = Food::latest()->paginate(5);
-
-        return view('food', compact('foods'));
+        return view('admin.food', compact('foods'));
 
     }
     public function AllFood2(){
         $foods = Food::latest()->paginate(5);
-
-        return view('caloriesCalculator', compact('foods'));
+        return view('user.caloriesCalculator', compact('foods'));
 
     }
     public function AllFoodTes(){
@@ -79,7 +77,7 @@ class FoodController extends Controller
 
     public function Edit($id){
         $foods = Food::find($id);
-        return view('foodEdit', compact('foods'));
+        return view('admin.foodEdit', compact('foods'));
     }
 
     public function Update(Request $request, $id){

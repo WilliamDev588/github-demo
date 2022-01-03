@@ -33,7 +33,7 @@ class UserController extends Controller
         return redirect('/login');
     }
     public function register(){
-        return view('register');
+        return view('login.register');
     }
 
     public function loginData(Request $request){
@@ -61,26 +61,26 @@ class UserController extends Controller
     }
 
     public function login(){
-        return view('login');
+        return view('login.login');
     }
 
     public function home(){
-        return view('home');
+        return view('user.home');
     }
 
     public function product(){
-        return view('product');
+        return view('user.product');
     }
 
     public function productDetail(){
-        return view('productDetail');
+        return view('user.productDetail');
     }
 
     public function about(){
-        return view('about');
+        return view('user.about');
     }
 
     public function admin(){
-        return view('admin');
+        return view('admin.admin');
     }
 }

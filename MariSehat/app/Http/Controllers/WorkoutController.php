@@ -9,7 +9,12 @@ class WorkoutController extends Controller
 {
     public function AllWorkout(){
         $workouts = Workout::latest()->paginate(5);
-        return view('workout', compact('workouts'));
+        return view('admin.workout', compact('workouts'));
+
+    }
+    public function AllWorkout2(){
+        $workouts = Workout::latest()->paginate(5);
+        return view('user.workoutCalculator', compact('workouts'));
 
     }
     public function AddWorkout(Request $request){
@@ -54,7 +59,7 @@ class WorkoutController extends Controller
     }
     public function Edit($id){
         $workouts = Workout::find($id);
-        return view('workoutEdit', compact('workouts'));
+        return view('admin.workoutEdit', compact('workouts'));
     }
 
     public function Update(Request $request, $id){

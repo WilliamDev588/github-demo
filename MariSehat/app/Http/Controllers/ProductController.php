@@ -14,7 +14,7 @@ class ProductController extends Controller
     public function addProductPage(){
         $product = Product::all();
         $category = Category::all();
-        return view('/addProduct')->with('product', $product)->with('category', $category);
+        return view('admin.addProduct')->with('product', $product)->with('category', $category);
 
     }
     public function addProducts(Request  $request){
@@ -52,7 +52,7 @@ class ProductController extends Controller
     public function updateProductPage($id){
         $product = Product::find($id);
         $category = Category::all();
-        return view('/updateProduct')->with('product', $product)->with('category', $category);
+        return view('admin.updateProduct')->with('product', $product)->with('category', $category);
     }
 
     public function updateProduct(Request $request, $id){
@@ -91,7 +91,7 @@ class ProductController extends Controller
         $product = Product::all();
         $category = Category::all();
 
-        return view('/addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
+        return view('admin.addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
     }
 
     public function deleteProduct($id){
@@ -105,6 +105,6 @@ class ProductController extends Controller
         $product = Product::all();
         $category = Category::all();
 
-        return view('/addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
+        return view('admin.addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
     }
 }

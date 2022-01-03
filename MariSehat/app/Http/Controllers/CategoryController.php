@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function addCategoryPage(){
         $category = Category::all();
-        return view('/addCategory')->with('category', $category);
+        return view('admin.addCategory')->with('category', $category);
 
     }
     public function addCategory(Request  $request){
@@ -33,7 +33,7 @@ class CategoryController extends Controller
     public function updateCategoryPage($id){
 //        $product = Product::find($id);
         $category = Category::find($id);
-        return view('/updateCategory')->with('category', $category);
+        return view('admin.updateCategory')->with('category', $category);
     }
 
     public function updateCategory(Request $request, $id){
@@ -53,13 +53,13 @@ class CategoryController extends Controller
             $category->save();
         }else{
             $category = Category::all();
-            return view('/addCategory')->with('success','Category updated successfully')->with('category', $category);
+            return view('admin.addCategory')->with('success','Category updated successfully')->with('category', $category);
 
         }
 
         $category = Category::all();
 
-        return view('/addCategory')->with('success','Category updated successfully')->with('category', $category);
+        return view('admin.addCategory')->with('success','Category updated successfully')->with('category', $category);
     }
 
     public function deleteCategory($id){
@@ -68,10 +68,10 @@ class CategoryController extends Controller
             $category->delete();
         }else{
             $category = Category::all();
-            return view('/addCategory')->with('success','Category deleted successfully')->with('category', $category);
+            return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
         }
 
         $category = Category::all();
-        return view('/addCategory')->with('success','Category deleted successfully')->with('category', $category);
+        return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
     }
 }
