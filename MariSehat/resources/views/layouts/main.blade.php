@@ -113,7 +113,7 @@
                     <p>
                         <i class="fas fa-home mr-3"></i>Jakarta, Indonesia
                     </p>
-                    <i class="fas fa-envelope mr-3"></i>CustomerService@MariSehat.com
+                    <i class="fas fa-envelope mr-3"></i>CS@MariSehat.com
                     </p>
                     <p>
                         <i class="fas fa-phone mr-3"></i>14045

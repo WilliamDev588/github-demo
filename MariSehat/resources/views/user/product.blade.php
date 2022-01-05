@@ -1,102 +1,79 @@
 @extends('layouts.main')
 @section('container')
-<link href="./produk/produk.css" rel="stylesheet">
-<section class="vh-100" style="background-color: #FCECE8;">
-<div class="text-center py-4">
-<h2 >Our Products</h2>
-</div>
-<!-- List  -->
-<div class="row w-100">
-  <div class="col-md-2">
-    <ul class="list-group ml-2 border rounded-3 border-dark">
-      <li class="list-group-item">Kategori Produk</li>
-        @foreach($category as $cat)
-            <li class="list-group-item">{{$cat->category}}</li>
-        @endforeach
-{{--      <li class="list-group-item">B</li>--}}
-{{--      <li class="list-group-item">C</li>--}}
-{{--      <li class="list-group-item">D</li>--}}
-    </ul>
-  </div>
-  <!-- List -->
-  <div class="col-md-10">
+<link href="produk/produk.css" rel="stylesheet">
 
-    <section class="section-products">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-8 col-lg-6">
-          </div>
-        </div>
-        <div class="row">
-          @foreach($product as $product)
-          <div class="card col-md-6 col-lg-4 col-xl-3 rounded-3 shadow p-3 mb-5 bg-body rounded">
-            <div id="product-1" class="single-product">
-              <div class="part-1">
-                <img class="card-img-top mt-3" src="{{Storage::url($product->image) }}" alt="">
-                <ul>
-                <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                <li><a href="/addToCart/{{$product->id}}"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-              </div>
-              <div class="part-2">
-                <h3 class="product-title">{{$product->name}}</h3>
-                <h4 class="product-price">{{$product->price}}</h4>
-              </div>
-            </div>
-          </div>
-            @endforeach
-        </div>
-      </div>
-  </div>
-</div>
-</div>
+
+</header>
+
+<section class="page-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-3 blog-form">
+
+				<h2 class="blog-sidebar-title"><b>Categories</b></h2>
+				<hr />
+				@foreach($category as $cat)
+				<p class="blog-sidebar-list"><b><span class="list-icon"> > </span>{{$cat->category}}</b></p>
+				@endforeach
+
+			</div>
+			<!--END  <div class="col-lg-3 blog-form">-->
+
+			<div class="col-lg-9">
+				<div class="row">
+					<div class="input-group pr-5">
+						<input type="text" class="form-control" placeholder="Search"">
+						<div class=" input-group-append">
+						<span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+					</div>
+				</div>
+				<!-- Sorting by <div class="row"> -->
+				<div>&nbsp;</div>
+
+				<div class="row">
+					@foreach($product as $product)
+					<div class="col-sm-3 col-md-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body text-center">
+								<div class="product">
+									<div class="product-content">
+										<div class="product-img">
+											<img src="{{Storage::url($product->image) }}" class="product-image">
+										</div>
+
+										<div class="product-btns">
+										<a href="/addToCart/{{$product->id}}">
+											<button type="button" class="btn-cart">Add to Cart
+												<span><i class="fas fa-plus"></i></span>
+												</a>
+											</button>
+											
+												<button type="button" class="btn-view"> View Item
+													<span><i class="fas fa-shopping-cart"></i></span>
+										
+											</button>
+										</div>
+									</div>
+								</div>
+								<h5 class="card-title"><b>{{$product->name}}</b></h5>
+								<p class="card-text small">{{$product->description}}</p>
+								<p class="tags">Rp.{{$product->price}}</p>
+
+							</div>
+						</div>
+					</div>
+					@endforeach
+
+
+
+				</div>
+				<!--END  <div class="col-lg-9">-->
+
+			</div>
+		</div>
 </section>
-</section>
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h4 class="text-center font-weight-bold mt-4">Produk Terbaru</h4>
-<div class="row mx-auto">
-<div class="card mr-2 ml-2 " style="width: 18rem;">
-  <img src="header/photo-1521805103424-d8f8430e8933.jpg" class="card-img-top mt-2" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Barbel</h5>
-    <p class="card-text">Buat di angkat</p>
-    <a href="#" class="btn btn-primary">Details</a>
-    <a href="#" class="btn btn-danger">Rp.300.000</a>
-  </div>
-</div>
-
-</div> -->
-
-</div>
-
-</div>
 @endsection
