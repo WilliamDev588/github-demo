@@ -205,7 +205,7 @@
                                 <h5 class="font-weight-bold"><input id="totalCalorie"type="number"  hidden name="constFemale3" value="4.7" jAutoCalc="" size="5" style="font-weight: bold; font-size: smaller;"</h5>
                                     <select id="BMR" name="BMR">
                                     <option jAutoCalc="({constMale} + (({weight} * {constPound})  * {constMale2}) + (({height} * {constInch}) * {constMale3}) - ({age} * {constMale4})) * {level}">Male</option>
-                                    <option jAutoCalc="({constFemale} + {weight} * {constFemale2} + {height} * {constFemale3} - {age} * {constFemale4})* {level}">Female</option>
+                                    <option jAutoCalc="({constFemale} + (({weight} * {constPound})  * {constFemale2}) + (({height} * {constInch}) * {constFemale3}) - ({age} * {constFemale3})) * {level}">Female</option>
                                     
 
                                     </select>
@@ -217,7 +217,7 @@
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Weight (in grams)</strong>
                                     <h5 class="font-weight-bold"><input id="totalCalorie"type="text"  hidden name="sub" value="" jAutoCalc="" size="5" style="font-weight: bold; font-size: smaller;"</h5>
                                     
-                                    <h5 class="font-weight-bold"><input id="totalCalori" type="text" name="sub_total2" value="" jAutoCalc="SUM({itemGram})" size="5" style="font-weight: bold; font-size: smaller;color:red; border:none;"</h5>
+                                    <h5 class="font-weight-bold"><input id="totalCalorie" type="text" name="sub_total2" value="" jAutoCalc="SUM({itemGram})" size="5" style="font-weight: bold; font-size: smaller;color:red; border:none;"</h5>
 
                                 </li>
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total Calories Gained</strong>
