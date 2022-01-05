@@ -38,7 +38,7 @@ Route::get('/removeCart/{id}', [\App\Http\Controllers\CartController::class, 're
 
 // Product
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'productPage']);
-Route::get('/productDetail', [\App\Http\Controllers\UserController::class, 'productDetail']);
+Route::get('/productDetail/{id}', [\App\Http\Controllers\ProductController::class, 'details']);
 
 
 //  Calorie Calculator
