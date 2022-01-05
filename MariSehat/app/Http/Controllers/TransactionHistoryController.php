@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TransactionDetail;
 use App\Models\TransactionHistory;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -44,13 +45,14 @@ class TransactionHistoryController extends Controller
             $txDetail->save();
 
         }
+
         if($txHistory->total <= 0){
             return redirect()->back()->withErrors('There is no item on cart');
         }
         $txHistory->save();
         session()->forget('cart');
 
-        return redirect('/home')->with('success', 'Thankyou for choosing us!');
+        return redirect()->back()->with('success', 'Thankyou for choosing us!');
     }
 
     public function txHistory(){
