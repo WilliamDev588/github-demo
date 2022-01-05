@@ -1,4 +1,3 @@
-
 @extends('layouts.main')
 @section('container')
 
@@ -9,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>About Us</h2>
+                <h1>About Us</h1>
             </div>
         </div>
     </div>
@@ -29,7 +28,7 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
 
-                            <h2>Welcome to MariSehat</h2>
+                            <h1>Welcome to MariSehat</h1>
                         </div>
                         <div class="about-text">
                             <p>
@@ -54,4 +53,5 @@
 
           @endsection
 
+          
 
