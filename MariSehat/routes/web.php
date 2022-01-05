@@ -32,9 +32,9 @@ Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
 
 // Cart
 //Route::view('/mycart', 'user.cart');
-Route::get('/mycart', [\App\Http\Controllers\CartController::class, 'cartPage']);
-Route::get('/addToCart/{id}', [\App\Http\Controllers\CartController::class, 'addToCart']);
-Route::get('/removeCart/{id}', [\App\Http\Controllers\CartController::class, 'remove']);
+Route::get('/mycart', [\App\Http\Controllers\CartController::class, 'cartPage'])->middleware('member');
+Route::get('/addToCart/{id}', [\App\Http\Controllers\CartController::class, 'addToCart'])->middleware('member');
+Route::get('/removeCart/{id}', [\App\Http\Controllers\CartController::class, 'remove'])->middleware('member');
 
 // Product
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'productPage']);
@@ -89,6 +89,6 @@ Route::get('/findFoodName','FoodController@findFoodName');
 Route::get('/findFoodCalorie','FoodController@findFoodCalorie');
 Route::get('/GetFoodCalorie', [FoodController::class, 'GetFoodCalorie']);
 
-Route::post('/checkout', [\App\Http\Controllers\TransactionHistoryController::class, 'checkout'])->middleware('admin');
+Route::post('/checkout', [\App\Http\Controllers\TransactionHistoryController::class, 'checkout'])->middleware('member');
 
 Route::get('/txHistory', [\App\Http\Controllers\TransactionHistoryController::class, 'txHistory']);
