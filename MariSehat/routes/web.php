@@ -89,6 +89,6 @@ Route::get('/findFoodName','FoodController@findFoodName');
 Route::get('/findFoodCalorie','FoodController@findFoodCalorie');
 Route::get('/GetFoodCalorie', [FoodController::class, 'GetFoodCalorie']);
 
-Route::post('/checkout', [\App\Http\Controllers\TransactionHistoryController::class, 'checkout']);
+Route::post('/checkout', [\App\Http\Controllers\TransactionHistoryController::class, 'checkout'])->middleware('admin');
 
 Route::get('/txHistory', [\App\Http\Controllers\TransactionHistoryController::class, 'txHistory']);
