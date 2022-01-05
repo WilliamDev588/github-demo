@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mari Sehat</title>
     <link href="./script/style.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
@@ -138,6 +139,95 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jautocalc@1.3.1/dist/jautocalc.js"></script>
+	<script type="text/javascript">
+		$(function() {
 
+			function autoCalcSetup() {
+				$('form#cart').jAutoCalc('destroy');
+				$('form#cart tr.line_items').jAutoCalc({keyEventsFire: true, decimalPlaces: 2, emptyAsZero: true});
+				$('form#cart').jAutoCalc({decimalPlaces: 2});
+			}
+			autoCalcSetup();
+            var x = 1;
+
+			$('button.row-remove').on("click", function(e) {
+				e.preventDefault();
+
+				var form = $(this).parents('form')
+                if(x > 1) {
+                    $(this).parents('tr').remove();
+                    x--;
+                }
+				autoCalcSetup();
+
+			});
+
+			$('button.row-add').on("click", function(e) {
+				e.preventDefault();
+
+				var $table = $(this).parents('table');
+				var $top = $table.find('tr.line_items').first();
+                x++;
+				var $new = $top.clone(true);
+                $("#foodName"). attr("disabled", true);
+
+				$new.jAutoCalc('destroy');
+				$new.insertBefore($top);
+				$new.find('input[type=text]').val('');
+				autoCalcSetup();
+
+			});
+            $(document).on('change', '#foodName', function() {
+                  var air_id =  $('#foodName').val();     // get id the value from the select
+                  $('#foodCalorie').val(air_id);   // set the textbox value
+
+              });
+              $(document).on('change', '#workoutName', function() {
+                  var air_id =  $('#workoutName').val();     // get id the value from the select
+                  $('#workoutCalorie').val(air_id);   // set the textbox value
+
+              });
+              $(document).on('change', '#totalCalori', function() {
+                  var air_id =  $('#totalCalorie').val();     // get id the value from the select
+                  $('#totalCalorie2').val(air_id);   // set the textbox value
+
+              });
+            //   var e = document.getElementById("foodName");
+            //     var strUser = e.value;
+            
+            
+		});
+   
+        function getValue(){
+              
+                  document.getElementById('subTotal').innerHTML = 5;
+                  
+                
+        }
+        function getSum(){
+            var x = document.getElementById("subTotal").value;
+            document.getElementById("totalCalorie").innerHTML = x;
+        }
+		//-->
+        $("#ddlModel").on("change",function(){
+        var GetValue=$("#ddlModel").val();
+        $("#genderCalorie").val(GetValue);
+        });
+        $("#ddlModel2").on("change",function(){
+        var GetValue=$("#ddlModel2").val();
+        $("#genderCalorie2").val(GetValue);
+        });
+        $("#BMR").on("change",function(){
+        var GetValue=$("#BMR").val();
+        $("#totalBMR").val(GetValue);
+        });
+        $("#level").on("change",function(){
+        var GetValue=$("#level").val();
+        $("#totalCalorielevel").val(GetValue);
+        });
+	</script>
 
 </html>

@@ -25,6 +25,12 @@ class FoodController extends Controller
         return view('tes', compact('foods'));
 
     }
+    public function AllFoodTes2(){
+        $foods = Food::latest()->paginate(5);
+
+        return view('tes2', compact('foods'));
+
+    }
     public function AddFood(Request $request){
         $validated = $request->validate([
             'foodName' => 'required|unique:food|max:255',

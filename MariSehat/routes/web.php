@@ -81,8 +81,8 @@ Route::get('/updateCategory/{id}', [\App\Http\Controllers\CategoryController::cl
 Route::post('/updateCategory/{id}', [\App\Http\Controllers\CategoryController::class, 'updateCategory']);
 Route::get('/deleteCategory/{id}', [\App\Http\Controllers\CategoryController::class, 'deleteCategory']);
 
-// Food Test
-Route::get('/tes', [FoodController::class, 'AllFoodTes']);
+
+
 Route::post('/caloriesCalculator/calculate', [FoodController::class, 'CalculateCalorie'])->name('calculate.calorie');
 Route::get('/foodview','FoodController@AllFood');
 Route::get('/findFoodName','FoodController@findFoodName');
