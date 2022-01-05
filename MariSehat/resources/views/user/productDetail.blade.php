@@ -80,11 +80,11 @@
           <div class="row py-lg-5">
             <div class="col-lg-10 col-md-8 mx-auto">
               <h1 class="fw-light">Product Details</h1>
-              <img src="header/barbel2.jpg" alt="Image" width="850" height="600" style="vertical-align:middle;margin:20px 50px">
-              <p class="lead text-muted">BARBELL INI SANGATLAH LAKIIIKK !!!!!! TAPI MOMIN TIDAK LAKEEEKKK</p>
+              <img src="produk/barbel2.jpg" alt="Image" width="850" height="600" style="vertical-align:middle;margin:20px 50px">
+              <p class="card-text">Barbell Bar</p>
+              <p class="lead text-muted">A men's Olympic bar is a metal bar that is 2.2 metres (7.2 ft) long and weighs 20 kilograms (44 lb). The outer ends are 1.96 inches (50 mm) in diameter, while the grip section is 28 millimetres (1.1 in) in diameter, and 1.31 metres (4.3 ft) in length.</p>
               <p>
-                <a href="#" class="btn btn-primary my-2">BUY NOW</a>
-                <a href="#" class="btn btn-secondary my-2">TES 3</a>
+                <a href="#" class="btn btn-primary my-2">Add to Cart</a>
               </p>
             </div>
           </div>
@@ -96,45 +96,45 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="produk/dumbell.jpg" alt="Image" width="200px">
+                    <img src="produk/kb.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">TES 7</p>
+                    <p class="card-text">Kettlebell</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 8</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 9</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">TES 10</small>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="header/barbel.jpg" alt="Image" width="200px">
+                    <img src="produk/bcaa.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">TES 13</p>
+                    <p class="card-text">BCAA</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 14</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 15</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">TES 16</small>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="produk/dumbell.jpg" alt="Image" width="200px">
+                    <img src="produk/mat.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">TES 17</p>
+                    <p class="card-text">Yoga Mat</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 18</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 19</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">TES 20</small>
+
                     </div>
                   </div>
                 </div>
@@ -142,45 +142,44 @@
 
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="header/barbel.jpg" alt="Image" width="200px">
+                    <img src="produk/whey2.jpg" alt="Image" width="200px" height="200px">
                   <div class="card-body">
-                    <p class="card-text">TES 21</p>
+                    <p class="card-text">Whey Protein</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 22</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">TES 23</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">TES 24</small>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="produk/dumbell.jpg" alt="Image" width="200px">
+                    <img src="produk/granola.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">TES 25</p>
+                    <p class="card-text">Granola with Cashews</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">26</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">27</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">28</small>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="header/barbel.jpg" alt="Image" width="200px">
+                    <img src="produk/bar2.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">29</p>
+                    <p class="card-text">Protein Bar</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">30</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">31</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">32</small>
+
                     </div>
                   </div>
                 </div>
@@ -188,30 +187,30 @@
 
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="produk/dumbell.jpg" alt="Image" width="200px">
+                    <img src="produk/granolabites.jpg" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">41</p>
+                    <p class="card-text">Granola Bites</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">42</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">43</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">44</small>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                    <img src="header/barbel.jpg" alt="Image" width="200px">
+                    <img src="produk/casein.png" alt="Image" width="200px">
                   <div class="card-body">
-                    <p class="card-text">45</p>
+                    <p class="card-text">Casein</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">45</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">46</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
                       </div>
-                      <small class="text-muted">47</small>
+
                     </div>
                   </div>
                 </div>
