@@ -58,23 +58,24 @@
             <!-- End -->
           </div>
         </div>
-
+          <form action="/checkout" method="post" enctype="multipart/form-data">
+              {{csrf_field()}}
         <div class="row py-5 p-4 bg-white rounded shadow-sm">
           <div class="col-lg-6">
-            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Card Number</div>
             <div class="p-4">
-              <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+              <p class="font-italic mb-4">Credit Card Number</p>
               <div class="input-group mb-4 border rounded-pill p-2">
-                <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
+                <input type="number" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
                 <div class="input-group-append border-0">
                   <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
                 </div>
               </div>
             </div>
-            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
+            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">note for seller</div>
             <div class="p-4">
               <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
-              <textarea name="" cols="30" rows="2" class="form-control"></textarea>
+              <input name="note" cols="30" rows="2" class="form-control"></input>
             </div>
           </div>
           <div class="col-lg-6">
@@ -88,11 +89,11 @@
                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                   <h5 class="font-weight-bold">{{$total}}</h5>
                 </li>
-              </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+              </ul><button type="submit" class="btn rounded-pill bg-primary" style="width: 10rem; color: white">Proceed to checkout</button>
             </div>
           </div>
         </div>
-
+          </form>
       </div>
     </div>
   </div>
