@@ -164,7 +164,7 @@
                                 <h5 class="font-weight-bold"><input id="totalCalorie"type="number"  hidden name="constFemale3" value="4.7" jAutoCalc="" size="5" style="font-weight: bold; font-size: smaller;"</h5>
                                     <select id="BMR" name="BMR">
                                     <option jAutoCalc="({constMale} + (({weight} * {constPound})  * {constMale2}) + (({height} * {constInch}) * {constMale3}) - ({age} * {constMale4})) * {level}">Male</option>
-                                    <option jAutoCalc="({constFemale} + {weight} * {constFemale2} + {height} * {constFemale3} - {age} * {constFemale4})* {level}">Female</option>
+                                    <option jAutoCalc="({constFemale} + (({weight} * {constPound})  * {constFemale2}) + (({height} * {constInch}) * {constFemale3}) - ({age} * {constFemale3})) * {level}">Female</option>
                                     
 
                                     </select>
