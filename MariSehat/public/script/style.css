@@ -17,8 +17,8 @@ body, html {
   
   }
   .bgimg-1 {
-    min-height: 100%;
-    background-image: url("https://i.ibb.co/ct3K4v3/young-woman-doing-yoga-pose-with-icons-cartoon-vector-illustration-graphic-design.jpg");
+    min-height: 800px;
+    background-image: url("https://i.ibb.co/5vRZtMR/young-woman-doing-yoga-pose-with-icons-cartoon-vector-illustration-graphic-design.jpg");
   }
 
   
@@ -99,13 +99,6 @@ section #text span{
   color:whitesmoke;
   background-color:#282E34;
   text-align:center;
-  padding:50px 80px 100px;
+  padding:50px 80px ;
   text-align: justify;
 }
-
-/* #borderless_button{
-  background-color:transparent;
-  font-size:25px;
-  color: #f7f7f7;
-  background-color: #111;
-} */

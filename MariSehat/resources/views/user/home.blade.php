@@ -1,8 +1,6 @@
 @extends('layouts.main')
 @section('container')
-<br>
-<br>
-<br>
+
 <div class="bgimg-1">
   <div class="caption">
     <section>
@@ -10,15 +8,14 @@
     </section>
   </div>
 </div>
-<div id='white_Box'>
-  <h3 style="text-align:center;"></h3>
-  <p>
-    This is a place holder
-    <br>There were about twenty people on the dam. Most of them were simply walking and getting exercise. There were a few who were fishing. There was a family who had laid down a blanket and they were having a picnic. It was like this most days and nothing seemed out of the ordinary. The problem was that nobody noticed the water leaking through the dam wall.
-    Do you think you're living an ordinary life? You are so mistaken it's difficult to even explain. The mere fact that you exist makes you extraordinary. The odds of you existing are less than winning the lottery, but here you are. Are you going to let this extraordinary opportunity pass?
-    He was aware there were numerous wonders of this world including the unexplained creations of humankind that showed the wonder of our ingenuity. There are huge heads on Easter Island. There are the Egyptian pyramids. There’s Stonehenge. But he now stood in front of a newly discovered monument that simply didn't make any sense and he wondered how he was ever going to be able to explain it.
-    She nervously peered over the edge. She understood in her mind that the view was supposed to be beautiful, but all she felt was fear. There had always been something about heights that disturbed her, and now she could feel the full force of this unease. She reluctantly crept a little closer with the encouragement of her friends as the fear continued to build. She couldn't help but feel that something horrible was about to happen.
 
+<div id='white_Box'>
+  {{-- <h3 style="text-align:center;"></h3> --}}
+  <p>
+    Mari Sehat
+    <br><br>
+    A useful app for more healty life. <br>Managing your life isn't a tedious task anymore. Simply use our feature and it will lessen your burdens.
+    <br>We have Calories Calculator, Workout Regiment and Marketplace.
   </p>
 </div>
 
@@ -31,21 +28,43 @@
 </div>
 
 <div id='black_Box'>
-  <p>This is a place holder
-    <br>Detail for Calculator
-  </p>
+  <div class="row">
+    <div class="col-sm-8">
+      <br><br><br><br>
+      <p>Calories Calculator
+        <br><br>
+        Calculate your food's calory. <br>Junk food, Traditional food, and Moderen food, we will calculate it for you.  
+      </p>
+      <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('caloriesCalculator')}}" style="text-decoration: none; color:black">Calories Calculator</a></button>
+    </div>
+    <div class="col-sm-4">
+      <img src="home/food.png" alt="" srcset="" style="max-width: 100% ; max-height: 100%">
+    </div>
+  </div>
+  <br>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-    <span class="border">Regiment Calculator</span>
+    <span class="border">Workout Calculator</span>
   </div>
 </div>
 
 <div id='black_Box'>
-  <p>This is a place holder
-    <br>Detail for Calculator
+  <div class="row">
+    <div class="col-sm-8">
+      <br><br><br><br><br><br><br>
+  <p>Workout Calculator
+    <br><br>
+    Calculate your burned calories from your workout. <br>Sit up, Back up, Push up, know your gain for today.
   </p>
+  <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('workoutCalculator')}}" style="text-decoration: none; color:black">Workout Calculator</a></button>
+    </div>
+    <div class="col-sm-4">
+      <img src="home/exercise.png" alt="" style="max-width: 100% ; max-height: 100%">
+    </div>
+  </div>
+  
 </div>
 
 <div class="bgimg-4">
@@ -55,14 +74,27 @@
 </div>
 
 <div id='black_Box'>
-  <p>This is a place holder
-    <br>Detail for Market
-  </p>
+  <br>
+  <div class="row">
+  <div class="col-12 col-md-8">
+    <br><br><br><br>
+    <p>Marketplace
+      <br><br>
+      Wondering where to get your vitamin? Or rather your soon to be equipment?
+      <br>
+      Afraid of subpar quality? 
+      <br>
+      Fear nothing as we also provide a regulated marketplace for high quality products.
+    </p>
+    <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('product')}}" style="text-decoration: none; color:black">Market</a></button>
+  </div>
+  <div class="col-6 col-md-4">
+    <img src="home/market.png" alt="" style="max-width: 100% ; max-height: 100%">
+  </div>
+  </div>
+    
+  </div> 
 </div>
 
-<div class="bgimg-1">
-  <div class="caption">
-  </div>
-</div>
 
   @endsection
