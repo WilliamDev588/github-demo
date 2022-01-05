@@ -114,4 +114,10 @@ class ProductController extends Controller
 
         return view('user.product')->with('category', $category)->with('product', $product);
     }
+
+    public function details($id){
+        $product = Product::find($id);
+
+        return view('productDetail')->with('product', $product);
+    }
 }
