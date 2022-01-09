@@ -39,15 +39,10 @@
                 </div>
             </li>
             <!-- Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-white font-weight-bold dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <li class="nav-item ">
+                <a class="nav-link text-white font-weight-bold" href="/product" >
                     Market
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/product">Food</a>
-                    <a class="dropdown-item" href="#">Equipment</a>
-                    <a class="dropdown-item" href="#">Vitamin</a>
-                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white font-weight-bold" href="/mycart">My Cart</a>

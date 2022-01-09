@@ -1,15 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    
+@extends('layouts.adminmain')
+@section('container')
+<div class="row g-3 my-2">
+<div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Add Food</div>
+                <div class="card-body"></div>
+            <form action="{{route('store.food')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Food Name</label>
+                    <input type="text" name="foodName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        @error('foodName')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                     
+                </div>
+                <div class="form-group">
+                    
+                    <label for="exampleInputEmail2" class="form-label">Food Calorie</label>
+                    <input type="text" name="foodCalorie" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        @error('foodCalorie')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                       
+                </div>
+                <div class="form-group">
+                    
+                    <label for="exampleInputEmail3" class="form-label">Food Information</label>
+                    <input type="text" name="foodInformation" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        @error('foodInformation')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                </div>
 
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Food Image</label>
+                    <input type="file" name="foodImage" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        @error('foodImage')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                </div>
+                <button type="submit" class="btn btn-primary">Add Food</button>
+                </form>
+                </div>
+            </div>
+                </div>
+
+                <div class="row my-5">
+                    <h3 class="fs-4 mb-3">Recent Orders</h3>
+                    <div class="col">
+                        <table class="table bg-white rounded shadow-sm  table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" width="50">#</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Customer</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Television</td>
+                                    <td>Jonny</td>
+                                    <td>$1200</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Laptop</td>
+                                    <td>Kenny</td>
+                                    <td>$750</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Cell Phone</td>
+                                    <td>Jenny</td>
+                                    <td>$600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Fridge</td>
+                                    <td>Killy</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Books</td>
+                                    <td>Filly</td>
+                                    <td>$120</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Gold</td>
+                                    <td>Bumbo</td>
+                                    <td>$1800</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Pen</td>
+                                    <td>Bilbo</td>
+                                    <td>$75</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>Notebook</td>
+                                    <td>Frodo</td>
+                                    <td>$36</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>Dress</td>
+                                    <td>Kimo</td>
+                                    <td>$255</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>Paint</td>
+                                    <td>Zico</td>
+                                    <td>$434</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>Carpet</td>
+                                    <td>Jeco</td>
+                                    <td>$1236</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td>Food</td>
+                                    <td>Haso</td>
+                                    <td>$422</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
 <div class="py-12">
         <div class="container">
             <div class="row">
@@ -56,57 +183,7 @@
                 {{$foods->links('pagination::bootstrap-4')}}
                 </div>
             </div>
-            <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">Add Food</div>
-                <div class="card-body"></div>
-            <form action="{{route('store.food')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="form-label">Food Name</label>
-                    <input type="text" name="foodName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        @error('foodName')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                     
-                </div>
-                <div class="form-group">
-                    
-                    <label for="exampleInputEmail2" class="form-label">Food Calorie</label>
-                    <input type="text" name="foodCalorie" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        @error('foodCalorie')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                       
-                </div>
-                <div class="form-group">
-                    
-                    <label for="exampleInputEmail3" class="form-label">Food Information</label>
-                    <input type="text" name="foodInformation" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        @error('foodInformation')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="form-label">Food Image</label>
-                    <input type="file" name="foodImage" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        @error('foodImage')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                </div>
-                <button type="submit" class="btn btn-primary">Add Food</button>
-                </form>
-                </div>
-            </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-</body>
-</html>
+    @endsection

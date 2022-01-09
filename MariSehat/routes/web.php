@@ -51,17 +51,17 @@ Route::get('/workoutCalculator', [WorkoutController::class, 'AllWorkout2'])->nam
 
 
 // Admin
-Route::get('/admin', [\App\Http\Controllers\UserController::class, 'admin']);
+Route::get('/admin', [\App\Http\Controllers\UserController::class, 'admin'])->middleware('admin');
 
 // Admin Food
-Route::get('/food/all', [FoodController::class, 'AllFood'])->name('all.food');
+Route::get('/food', [FoodController::class, 'AllFood'])->name('all.food');
 Route::post('/food/add', [FoodController::class, 'AddFood'])->name('store.food');
 Route::get('/food/edit/{id}', [FoodController::class, 'Edit']);
 Route::post('/food/update/{id}', [FoodController::class, 'Update']);
 Route::get('/food/delete/{id}', [FoodController::class, 'Delete']);
 
 // Admin Workout
-Route::get('/workout/all', [WorkoutController::class, 'AllWorkout'])->name('all.workout');
+Route::get('/workout', [WorkoutController::class, 'AllWorkout'])->name('all.workout');
 Route::post('/workout/add', [WorkoutController::class, 'AddWorkout'])->name('store.workout');
 Route::get('/workout/edit/{id}', [WorkoutController::class, 'Edit']);
 Route::post('/workout/update/{id}', [WorkoutController::class, 'Update']);

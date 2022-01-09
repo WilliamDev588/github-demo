@@ -55,8 +55,8 @@ html{
 
 .blog-form{
 	background-color: #F4F4F4; 
-	padding: 50px;
-	height: 1000px;
+	padding: 2rem;
+	height: 50rem;
 }
 
 .list-icon{
@@ -64,6 +64,9 @@ html{
 	color: #c0aa83;
 
 }
+
+
+
 
 .tags{
 	display: flex;

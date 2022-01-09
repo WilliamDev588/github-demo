@@ -38,7 +38,7 @@
       <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('caloriesCalculator')}}" style="text-decoration: none; color:black">Calories Calculator</a></button>
     </div>
     <div class="col-sm-4">
-      <img src="home/food.png" alt="" srcset="" style="max-width: 100% ; max-height: 100%">
+      <img src="home1/food.png" alt="" srcset="" style="max-width: 100% ; max-height: 100%">
     </div>
   </div>
   <br>
@@ -61,7 +61,7 @@
   <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('workoutCalculator')}}" style="text-decoration: none; color:black">Workout Calculator</a></button>
     </div>
     <div class="col-sm-4">
-      <img src="home/exercise.png" alt="" style="max-width: 100% ; max-height: 100%">
+      <img src="home1/exercise.png" alt="" style="max-width: 100% ; max-height: 100%">
     </div>
   </div>
   
@@ -89,7 +89,7 @@
     <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('product')}}" style="text-decoration: none; color:black">Market</a></button>
   </div>
   <div class="col-6 col-md-4">
-    <img src="home/market.png" alt="" style="max-width: 100% ; max-height: 100%">
+    <img src="home1/market.png" alt="" style="max-width: 100% ; max-height: 100%">
   </div>
   </div>
     
