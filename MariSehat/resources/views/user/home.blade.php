@@ -53,15 +53,16 @@
 <div id='black_Box'>
   <div class="row">
     <div class="col-sm-8">
-      <br><br><br><br><br><br><br>
+    <img src="home1/exercise.png" alt="" style="max-width: 100% ; max-height: 100%">
+
+    </div>
+    <div class="col-sm-4">
+    <br><br><br><br><br><br><br>
   <p>Workout Calculator
     <br><br>
     Calculate your burned calories from your workout. <br>Sit up, Back up, Push up, know your gain for today.
   </p>
   <button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary btn-round"><a href="{{url('workoutCalculator')}}" style="text-decoration: none; color:black">Workout Calculator</a></button>
-    </div>
-    <div class="col-sm-4">
-      <img src="home1/exercise.png" alt="" style="max-width: 100% ; max-height: 100%">
     </div>
   </div>
   

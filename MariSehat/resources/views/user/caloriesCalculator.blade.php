@@ -7,21 +7,27 @@
     <!-- Calculator -->
     <div class="container calculate">
             <div class="row">
-        <div class="col-lg-6">
+            <div class="col-lg-2">
+                  
+                  </div>
+                  <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="text-center">
                 <img src="./calculator/food.png" border="0">
                                 <h2 class="text-center">Calories Calculator</h2>
                                 <p>Calculate your food's calories here.</p>
-                <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <select class="form-control" id="sel1">
-                        <option selected="true" disabled="disabled">Please select your Food</option>
-                        @foreach($foods as $food)
-                        <option>{{$food->foodName}}</option>
-                        @endforeach
+                                <form id="cart" role="form" autocomplete="off" class="form" method="post">
+                                    <table name="cart" >
+                                    <tr>
+                                        <th></th>
+                                        <th>Food</th>
+                                        <th>Calorie</th>
+                                        <th>Gram</th>
+                                        <th>Sub Total </th>
+                                    </tr>
+                                     <tr class="line_items">
+                                        <td><button class="row-remove btn btn-danger">Remove</button></td>
                                     
                         {{-- <!-- <>{{$food->foodCalorie}}</> --> --}}
                       </select>
@@ -30,7 +36,6 @@
                   <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                      <input id="calculte" name="calculate" type="text" placeholder="Gram, ex. 100" class="form-control" type="text">
 
                                         <div class="form-group">
                                         <div class="input-group">  

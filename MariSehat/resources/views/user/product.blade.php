@@ -66,13 +66,13 @@
 
 											<div class="product-btns">
 												<a href="/addToCart/{{$product->id}}">
-													<button type="button" class="btn-cart">Add to Cart
-														<span><i class="fas fa-plus"></i></span>
+													<button type="button" class="btn-cart">
+														<span class="text-white"><i class="fas fa-plus"></i>Add to Cart</span>
 												</a>
 												</button>
 												<a href="/productDetail/{{$product->id}}">
-													<button type="button" class="btn-view"> View Item
-														<span><i class="fas fa-shopping-cart"></i></span>
+													<button type="button" class="btn-view">
+														<span class="text-dark"> View Item<i class="fas fa-shopping-cart"></i></span>
 												</a>
 												</button>
 											</div>
