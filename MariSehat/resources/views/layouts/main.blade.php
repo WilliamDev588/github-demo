@@ -24,7 +24,7 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white font-weight-bold " href="/home">Home</a>
+                <a class="nav-link text-white font-weight-bold " href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white font-weight-bold" href="/about">About Us</a>

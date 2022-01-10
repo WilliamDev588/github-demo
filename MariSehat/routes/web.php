@@ -18,7 +18,7 @@ use App\Http\Controllers\WorkoutController;
 
 
 // Home
-Route::get('/home', [\App\Http\Controllers\UserController::class, 'home']);
+Route::get('/', [\App\Http\Controllers\UserController::class, 'home']);
 
 // About us
 Route::get('/about', [\App\Http\Controllers\UserController::class, 'about']);

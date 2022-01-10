@@ -49,7 +49,7 @@ class UserController extends Controller
                 Cookie::queue('username', $username, 60);
                 Cookie::queue('password', $password, 60);
             }
-            return redirect('home');
+            return redirect('/');
         }else{
             return back()->withErrors(new MessageBag(['Invalid username or password']));
         }

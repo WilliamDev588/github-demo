@@ -9,18 +9,19 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
-    public function addCategoryPage(){
+    public function addCategoryPage()
+    {
         $category = Category::all();
         return view('admin.addCategory')->with('category', $category);
-
     }
-    public function addCategory(Request  $request){
+    public function addCategory(Request  $request)
+    {
         $rules = [
             'category' => 'required|unique:categories,category'
         ];
 
         $validator = Validator::make($request->all(), $rules);
-        if($validator->fails()){
+        if ($validator->fails()) {
             return back()->withErrors($validator);
         }
 
@@ -28,50 +29,61 @@ class CategoryController extends Controller
         $category->category = $request->category;
 
         $category->save();
-        return redirect()->back();
+        return Redirect()->back()->with('success', 'Category Inserted Succesfully');
     }
-    public function updateCategoryPage($id){
-//        $product = Product::find($id);
+    public function updateCategoryPage($id)
+    {
+        //        $product = Product::find($id);
         $category = Category::find($id);
         return view('admin.updateCategory')->with('category', $category);
     }
 
-    public function updateCategory(Request $request, $id){
+    public function updateCategory(Request $request, $id)
+    {
         $rules = [
             'category' => 'required|unique:categories,category'
         ];
 
         $validator = Validator::make($request->all(), $rules);
-        if($validator->fails()){
+        if ($validator->fails()) {
             return back()->withErrors($validator);
         }
 
         $category = Category::find($id);
-        if($category != null) {
+        if ($category != null) {
             $category->category = $request->category;
 
             $category->save();
-        }else{
+        } else {
             $category = Category::all();
-            return view('admin.addCategory')->with('success','Category updated successfully')->with('category', $category);
-
+            return view('admin.addCategory')->with('success', 'Category updated successfully')->with('category', $category);
         }
 
         $category = Category::all();
 
-        return view('admin.addCategory')->with('success','Category updated successfully')->with('category', $category);
+        return view('admin.addCategory')->with('success', 'Category updated successfully')->with('category', $category);
     }
 
-    public function deleteCategory($id){
-        $category = Category::find($id);
-        if($category != null) {
-            $category->delete();
-        }else{
-            $category = Category::all();
-            return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
-        }
+    public function Delete($id){
+        category::find($id)->delete();
+        return Redirect()->back()->with('success', 'Category deleted successfully');
+    }
 
-        $category = Category::all();
-        return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
+    public function deleteCategory($id)
+    {
+
+        category::find($id)->delete();
+        return Redirect()->back()->with('success', 'Category deleted successfully');
+
+        // $category = Category::find($id);
+        // if($category != null) {
+        //     $category->delete();
+        // }else{
+        //     $category = Category::all();
+        //     return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
+        // }
+
+        // $category = Category::all();
+        // return view('admin.addCategory')->with('success','Category deleted successfully')->with('category', $category);
     }
 }

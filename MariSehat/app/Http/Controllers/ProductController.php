@@ -91,7 +91,7 @@ class ProductController extends Controller
         $product = Product::all();
         $category = Category::all();
 
-        return view('admin.addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
+        return view('admin.addProduct')->with('success','Product updated successfully')->with('product', $product)->with('category', $category);
     }
 
     public function deleteProduct($id){
@@ -105,7 +105,7 @@ class ProductController extends Controller
         $product = Product::all();
         $category = Category::all();
 
-        return view('admin.addProduct')->with('success','food updated successfully')->with('product', $product)->with('category', $category);
+        return view('admin.addProduct')->with('success','Product updated successfully')->with('product', $product)->with('category', $category);
     }
 
     public function productPage(){
