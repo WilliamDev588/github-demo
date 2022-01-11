@@ -61,7 +61,7 @@ class CategoryController extends Controller
 
         $category = Category::all();
 
-        return view('admin.addCategory')->with('success', 'Category updated successfully')->with('category', $category);
+        return redirect('/addCategory')->with('success', 'Category updated successfully')->with('category', $category);
     }
 
     public function Delete($id){
@@ -71,9 +71,9 @@ class CategoryController extends Controller
 
     public function deleteCategory($id)
     {
-
+        $category = Category::all();
         category::find($id)->delete();
-        return Redirect()->back()->with('success', 'Category deleted successfully');
+        return Redirect()->back()->with('success', 'Category deleted successfully')->with('category', $category);
 
         // $category = Category::find($id);
         // if($category != null) {
