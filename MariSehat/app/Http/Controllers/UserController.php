@@ -49,6 +49,8 @@ class UserController extends Controller
                 Cookie::queue('username', $username, 60);
                 Cookie::queue('password', $password, 60);
             }
+            if(auth()->user()->role == 'admin')
+                return redirect('/admin');
             return redirect('/');
         }else{
             return back()->withErrors(new MessageBag(['Invalid username or password']));
