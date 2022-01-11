@@ -51,7 +51,7 @@ Route::get('/workoutCalculator', [WorkoutController::class, 'AllWorkout2'])->nam
 
 
 // Admin
-Route::get('/admin', [\App\Http\Controllers\UserController::class, 'admin'])->middleware('admin');
+Route::get('/admin', [\App\Http\Controllers\TransactionHistoryController::class, 'txHistory'])->middleware('admin');
 
 // Admin Food
 Route::get('/food', [FoodController::class, 'AllFood'])->name('all.food');

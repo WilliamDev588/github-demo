@@ -56,11 +56,8 @@ class TransactionHistoryController extends Controller
     }
 
     public function txHistory(){
-        if(auth()->user()->role == 'Admin')
-            $txHistory = TransactionHistory::all();
-        else
-            $txHistory = TransactionHistory::where('user_id', 'LIKE', auth()->user()->id)->get();
+        $txHistory = TransactionHistory::all();
 
-        return view('TransactionHistory')->with('txHistory', $txHistory);
+        return view('admin.admin')->with('txHistory', $txHistory);
     }
 }
