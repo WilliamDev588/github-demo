@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="./script/admin.css" rel="stylesheet">
-    <title>Bootstap 5 Responsive Admin Dashboard</title>
+    <title>Admin</title>
 </head>
 
 <body>
@@ -18,15 +18,15 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">MariSehat</div>
             <div class="list-group list-group-flush my-3">
                 <a href="/admin" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-tachometer-alt me-2"></i>Transaction</a>
+                        class="far fa-money-bill-alt me-2"></i>Transaction</a>
                 <a href="/addCategory" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-project-diagram me-2"></i>Category</a>
+                        class="fas fa-folder me-2"></i>Category</a>
                 <a href="/addProduct" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-chart-line me-2"></i>Product</a>
+                        class="fas fa-shopping-cart me-2"></i>Product</a>
                 <a href="/food" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-paperclip me-2"></i>Food</a>
+                        class="fas fa-fish me-2"></i>Food</a>
                 <a href="/workout" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-shopping-cart me-2"></i>Workout</a>
+                        class="fas fa-dumbbell me-2"></i>Workout</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->

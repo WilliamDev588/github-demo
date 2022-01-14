@@ -7,8 +7,8 @@
 <div class="page-header">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1>About Us</h1>
+            <div class="col-12 text-center my-5">
+                <h1 class="font-weight-bold">About Us</h1>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
 
               <!-- About Start -->
 
-            <div class="container">
+            <div class="container mb-5">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-7">
                         <div class="about-img">

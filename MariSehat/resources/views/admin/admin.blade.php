@@ -49,10 +49,15 @@
             <table class="table bg-white rounded shadow-sm  table-hover">
                 <thead>
                 <tr>
-                    <th scope="col" width="50">#</th>
+                    <th scope="col" width="50">No</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Product</th>
                     <th scope="col">Customer</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Card Number</th>
+                    <th scope="col">Note</th>
+                    <th scope="col">Total</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -60,9 +65,14 @@
                     @for($i = 0; $i < count($txHistory->transactiondetail); $i++)
                         <tr>
                             <th scope="row">{{$i+1}}</th>
+                            <td>{{$txHistory->date}}</td>
                             <td>{{$txHistory->transactiondetail[$i]->name}}</td>
                             <td>{{$txHistory->user->username}}</td>
                             <td>{{$txHistory->transactiondetail[$i]->price}}</td>
+                            <td>{{$txHistory->transactiondetail[$i]->quantity}}</td>
+                            <td>{{$txHistory->cardNumber}}</td>
+                            <td>{{$txHistory->note}}</td>
+                            <td>{{$txHistory->total}}</td>
                         </tr>
                     @endfor
                 @endforeach

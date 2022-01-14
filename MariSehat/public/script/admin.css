@@ -1,4 +1,5 @@
 :root {
+  
     --main-bg-color: #009d63;
     --main-text-color: #009d63;
     --second-text-color: #bbbec5;
@@ -7,6 +8,7 @@
   
   .primary-text {
     color: var(--main-text-color);
+    font: "Lato", sans-serif;
   }
   
   .second-text {
@@ -29,7 +31,7 @@
     overflow-x: hidden;
     background-image: linear-gradient(
       to right,
-      #baf3d7,
+      #bbbab6,
       #c2f5de,
       #cbf7e4,
       #d4f8ea,

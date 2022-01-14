@@ -69,10 +69,10 @@
                             <input type="text" name="number" placeholder="Enter Card Number" class="form-control input-group  border rounded-pill " required />
 
                         </div>
-                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">note for seller</div>
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Adress & Note</div>
                         <div class="p-4">
                             <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
-                            <input type="text" name="note" placeholder="Enter note" class="form-control" required />
+                            <input type="text" name="note" placeholder="Enter Adress & Note" class="form-control" required />
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -80,11 +80,11 @@
                         <div class="p-4">
                             <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                       
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>Free</strong></li>
+                    
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                                    <h5 class="font-weight-bold">{{$total}}</h5>
+                                    <h5 class="font-weight-bold">Rp.{{$total}}</h5>
                                 </li>
                             </ul>
                             <button type="submit" class="btn rounded-pill bg-dark " style="width: 20rem; color: white; margin-left:5rem;">Proceed to checkout</button>

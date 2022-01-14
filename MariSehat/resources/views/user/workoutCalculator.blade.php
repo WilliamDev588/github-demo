@@ -88,9 +88,7 @@
 
 
 
-                                    <!-- {{-- add another keep looping --}}
-                                    <p class="addMore" onclick="">Add Another</p>
-                                    {{-- <button class="addMore">Add Another</button> --}} -->
+                     
                                     <div class="form-group">
                                     <tr>
                                     <td><h6 style="color:white">sd</h6></td>
@@ -102,12 +100,10 @@
                                     </tr>
                                     
 
-                                        <!-- <input name="btnCalculate" class="btn btn-lg btn-primary btn-block btnCalculate" value="Calculate" type="submit"> -->
-                                        <!-- <button class="row-remove btn btn-lg btn-primary btn-block btnCalculate">Remove</button> -->
                                     </div>
                                     </tr>
                         <div class="text-center">
-                            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Workout's Details </div>
+                            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold mt-n5">Workout's Details </div>
                             <div class="p-4">
                             
                               <p class="font-italic">For most overweight people, cutting about 500 calories a day is a good place to start</p>
@@ -197,58 +193,12 @@
                                 
 
                                 
-                                
-                                <!-- <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">
-                                <input id="totalCalorie"type="number"  hidden name="male1" value="1400"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                <input id="totalCalorie"type="number"  hidden name="male2" value="2200"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-
-                                <input id="totalCalorie"type="number"  hidden name="male3" value="2800"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                <input id="totalCalorie"type="number"  hidden name="male4" value="2800"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                    Daily's Calories Needed (Male)
-                                    <select id="ddlModel" name="ddlModel">
-                                    <option jAutoCalc="{male1} - {sub_total}">0 - 6 years</option>
-                                    <option jAutoCalc="{male2} - {sub_total}">7 - 18 years</option>
-                                    <option jAutoCalc="{male3} - {sub_total}">18 - 30 years</option>
-                                    <option jAutoCalc="{male4} - {sub_total}">>30 years</option>
-
-                                    </select>
-                                </strong>
-                                
-                                    <h5 class="font-weight-bold"><input id="genderCalorie"type="text" name="sub_total" value=""  size="7" style="font-weight: bold; font-size: smaller;color:red;"</h5>
-
-                                </li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">
-                                <input id="totalCalorie"type="number"  hidden name="female1" value="1200"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                <input id="totalCalorie"type="number"  hidden name="female2" value="2000"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-
-                                <input id="totalCalorie"type="number"  hidden name="female3" value="2200"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                <input id="totalCalorie"type="number"  hidden name="female4" value="2200"  size="5" style="font-weight: bold; font-size: smaller;"</h5>
-                                    Daily's Calories Needed (Female)
-                                    <select id="ddlModel2" name="ddlModel2">
-                                    <option jAutoCalc="{female1} - {sub_total}">0 - 6 years</option>
-                                    <option jAutoCalc="{female2} - {sub_total}">7 - 18 years</option>
-                                    <option jAutoCalc="{female3} - {sub_total}">18 - 30 years</option>
-                                    <option jAutoCalc="{female4} - {sub_total}">>30 years</option>
-
-                                    </select>
-                                </strong>
-                                
-                                    <h5 class="font-weight-bold"><input id="genderCalorie2"type="text" name="sub_total" value=""  size="7" style="font-weight: bold; font-size: smaller;color:red;"</h5>
-
-                                </li> -->
+                            
                           </div>
                         </div>
                                     </table>
                                     </form>
-                                    
-                                        <!-- @if(isset($_POST['submit'])){
-                                            $textValue = $_POST['sub_total'];
-                                            echo $textValue;
-                                        }
-                                        @endif -->
-                                    
-                                    
-
+      
                             </div>
                         </div>
                     </div>

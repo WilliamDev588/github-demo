@@ -1,35 +1,7 @@
 @extends('layouts.main')
 @section('container')
-<!-- <div class="container">
-<form action="/loginSubmit" method="post" enctype="multipart/form-data">
-{{csrf_field()}}
-<h2 class="text-center">Login</h2>
-<div class="form-group row">
-    <label for="InputUsername" class="col-sm-2 col-form-label">Username</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="InputUsername" placeholder="Username"  name="username">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Login</button>
-    </div>
-  </div>
-    <div class="errorMes d-flex justify-content-center">
-        @if($errors->any())
-            <i class="text-danger text-center mt-3">{{$errors->first()}}</i>
-        @endif
-    </div>
-</form>
-</div> -->
 
-<section class="vh-100" style="background-color: #FCECE8;">
+<section class="vh-100" style="background-color: #FAF7EE;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">

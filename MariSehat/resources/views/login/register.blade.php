@@ -38,7 +38,7 @@
 </form>
 </div> -->
 
-<section class="vh-100" style="background-color: #FCECE8;">
+<section class="vh-100" style="background-color: #FAF7EE;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">

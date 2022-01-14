@@ -31,6 +31,7 @@
                     <td>{{$food->foodInformation}}</td>
                     <td><img src="{{asset($food->foodImage)}}" style="height:70px; width:100px"></td>
                     <td>
+                        
                         <a href="{{url('food/edit/'.$food->id)}}" class="btn btn-info align-self-center"><i class="fas fa-edit me-2"></i>Update</a>
                         <a href="{{url('food/delete/'.$food->id)}}" class="btn btn-danger  align-self-center" onclick="return confirm('Are you sure to delete?')"><i class="fas fa-trash-alt me-2"></i>Delete</a>
                     </td>

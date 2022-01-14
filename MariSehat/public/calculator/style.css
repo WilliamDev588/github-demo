@@ -1,5 +1,12 @@
 body{
-    background:#bbbab6;
+    background-image : linear-gradient(
+        to right,
+        #bbbab6,
+        #c2f5de,
+        #cbf7e4,
+        #d4f8ea,
+        #ddfaef
+      );
 }
 .calculate > a{
     color: #dc3545;

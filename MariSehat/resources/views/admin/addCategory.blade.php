@@ -26,8 +26,8 @@
                     <th scope="row">{{$category->id}}</th>
                     <td>{{$category->category}}</td>
                     <td>
-                        <a href="/updateCategory/{{$category->id}}" class="btn btn-primary">Update</a>
-                        <a href="/deleteCategory/{{$category->id}}" class="btn btn-danger" onclick="return confirm('Are you sure to delete?')">Delete</a>
+                    <a href="/updateCategory/{{$category->id}}" class="btn btn-info align-self-center"><i class="fas fa-edit me-2"></i>Update</a>
+                        <a href="/deleteCategory/{{$category->id}}" class="btn btn-danger  align-self-center" onclick="return confirm('Are you sure to delete?')"><i class="fas fa-trash-alt me-2"></i>Delete</a>
                     </td>
                 </tr>
                 @endforeach
@@ -38,7 +38,7 @@
 </div>
 
 <div class="row g-3 my-3 mb-5">
-    <h3 class="fs-4">Add Product</h3>
+    <h3 class="fs-4">Add Category</h3>
     <div class="col-md-4">
         <div class="card">
             <form action="/addCategory" method="POST" enctype="multipart/form-data" class="p-3">
@@ -51,7 +51,7 @@
                     @enderror
 
                 </div>
-                <button type="submit" class="btn btn-primary">Add Category</button>
+                <button type="submit" class="btn btn-primary mt-3">Add Category</button>
             </form>
         </div>
         <div class="errorMes d-flex flex-column justify-content-center">
