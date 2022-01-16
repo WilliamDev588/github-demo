@@ -36,13 +36,17 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->description = $request->description;
 
-        $file = $request->file('image');
-        $imageName = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/image/products', $file, $imageName);
+        $image = $request->file('image');
+        $nameGen = hexdec(uniqid());
+        $imgExt = strtolower($image->getClientOriginalExtension());
+        $imgName = $nameGen.'.'.$imgExt;
+        $upLocation = 'header/';
+        $lastImg = $upLocation.$imgName;
+
+        $image->move( $upLocation,$imgName);
 
 
-        $product->image = 'image/products/'.$imageName;
-//        dd($product);
+        $product->image = $lastImg;
         $product->save();
 
         return redirect('/addProduct');
@@ -76,13 +80,18 @@ class ProductController extends Controller
             $product->description = $request->description;
 
             if($request->file('image')){
-                $file = $request->file('image');
-                $imageName = time() . '.' . $file->getClientOriginalExtension();
-                Storage::putFileAs('public/image/products', $file, $imageName);
+                $image = $request->file('image');
+                $nameGen = hexdec(uniqid());
+                $imgExt = strtolower($image->getClientOriginalExtension());
+                $imgName = $nameGen.'.'.$imgExt;
+                $upLocation = 'header/';
+                $lastImg = $upLocation.$imgName;
 
-                Storage::delete('public/' . $product->image);
+                $image->move( $upLocation,$imgName);
 
-                $product->image = 'image/products' . $imageName;
+                unlink($image);
+
+                $product->image = $lastImg;
             }
             $product->save();
         }
