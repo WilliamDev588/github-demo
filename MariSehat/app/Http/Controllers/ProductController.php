@@ -30,11 +30,11 @@ class ProductController extends Controller
             return back()->withErrors($validator);
         }
 
-        $product = new Product();
-        $product->name = $request->name;
-        $product->category_id = $request->category;
-        $product->price = $request->price;
-        $product->description = $request->description;
+        // $product = new Product();
+        // $product->name = $request->name;
+        // $product->category_id = $request->category;
+        // $product->price = $request->price;
+        // $product->description = $request->description;
 
         $image = $request->file('image');
         $nameGen = hexdec(uniqid());
@@ -43,11 +43,20 @@ class ProductController extends Controller
         $upLocation = 'header/';
         $lastImg = $upLocation.$imgName;
 
-        $image->move( $upLocation,$imgName);
+        Product::insert([
+            'name'=> $request -> name,
+            'category_id'=> $request -> category,
+            'price'=> $request -> price,
+            'description' => $request ->description,
+            'image' => $lastImg,
 
 
-        $product->image = $lastImg;
-        $product->save();
+        ]);
+        // $image->move( $upLocation,$imgName);
+
+
+        // $product->image = $lastImg;
+        // $product->save();
 
         return redirect('/addProduct');
     }
