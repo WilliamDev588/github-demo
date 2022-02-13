@@ -64,7 +64,7 @@
                 @foreach($txHistory as $txHistory)
                     @for($i = 0; $i < count($txHistory->transactiondetail); $i++)
                         <tr>
-                            <th scope="row">{{$i+1}}</th>
+                            <th scope="row">{{$txHistory->id}}</th>
                             <td>{{$txHistory->date}}</td>
                             <td>{{$txHistory->transactiondetail[$i]->name}}</td>
                             <td>{{$txHistory->user->username}}</td>

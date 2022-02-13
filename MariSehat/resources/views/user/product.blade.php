@@ -61,7 +61,7 @@
 									<div class="store-product {{$product->category_id}}">
 										<div class="product-content">
 											<div class="product-img">
-												<img src="{{Storage::url($product->image) }}" class="product-image">
+												<img src="{{asset($product->image)}}" class="product-image">
 											</div>
 
 											<div class="product-btns">
